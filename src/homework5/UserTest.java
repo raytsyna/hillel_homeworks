@@ -28,6 +28,10 @@ public class UserTest {
         user2.makePurchase(75.0);
         user3.makePurchase(200.0);
 
+        user1.addDiscount(5);
+        user2.addDiscount(10);
+        user3.addDiscount(3);
+
         System.out.println("name:" + user1.userName + " " + "email:" + user1.email + " " + "age:" + user1.getAge());
         user1.printTotalAmountOfSpentMoney();
         System.out.println("\n");

@@ -8,6 +8,7 @@ public class User {
     private String password;
     public double amountSpentMoney;
     public boolean isActive;
+    public int percent;
 
     public User() {
     }
@@ -52,5 +53,10 @@ public class User {
     public void printTotalAmountOfSpentMoney() {
         System.out.println("Total amount of spent money: " + this.amountSpentMoney + " $");
     }
+
+    public void addDiscount(int percent){
+        double discount = (percent / 100.0) * amountSpentMoney;
+        amountSpentMoney -= discount;
+        }
 }
 
