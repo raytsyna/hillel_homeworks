@@ -28,20 +28,19 @@ public class UserTest {
         user2.makePurchase(75.0);
         user3.makePurchase(200.0);
 
-        user1.addDiscount(5);
-        user2.addDiscount(10);
-        user3.addDiscount(3);
 
         System.out.println("name:" + user1.userName + " " + "email:" + user1.email + " " + "age:" + user1.getAge());
         user1.printTotalAmountOfSpentMoney();
+        user1.addDiscount(5);
         System.out.println("\n");
 
         System.out.println("name:" + user2.userName + " " + "email:" + user2.email + " " + "age:" + user2.getAge());
         user2.printTotalAmountOfSpentMoney();
+        user2.addDiscount(10);
         System.out.println("\n");
 
         System.out.println("name:" + user3.userName + " " + "email:" + user3.email + " " + "age:" + user3.getAge());
         user3.printTotalAmountOfSpentMoney();
-
-    };
+        user3.addDiscount(3);
+    }
 }
