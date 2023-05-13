@@ -8,6 +8,7 @@ public class User {
     private String password;
     public double amountSpentMoney;
     public boolean isActive;
+    public String phoneNumber;
 
     public User() {
     }
