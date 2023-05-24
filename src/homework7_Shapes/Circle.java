@@ -36,11 +36,14 @@ class Circle extends Shape {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        return Objects.equals(radius, ((Circle) o).radius);
+    public boolean equals(Object obj) {
+        if (!super.equals(obj)) {
+            return false;
+        }
+        Circle other = (Circle) obj;
+        return this.x == other.x &&
+               this.y == other.y &&
+                radius == other.radius;
     }
 
 

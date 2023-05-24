@@ -17,6 +17,7 @@ class Rectangle extends Shape {
     public double calculateArea() {
         return width * height;
     }
+
     @Override
     public double calculatePerimeter() {
         return 2 * (width + height);
@@ -27,4 +28,19 @@ class Rectangle extends Shape {
         System.out.println("This is a rectangle with width " + width + ", height " + height + ", top-left corner at (" + x + ", " + y + "), color: " + color);
     }
 
+    @Override
+    public String toString() {
+        return "Rectangle{width=" + width + ", " + "height=" + height + ", " + "color='" + color + "'}";
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!super.equals(obj)) {
+            return false;
+        }
+        Rectangle other = (Rectangle) obj;
+        return width == other.width &&
+                height == other.height;
+
+    }
 }
