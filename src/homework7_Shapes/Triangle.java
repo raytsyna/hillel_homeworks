@@ -34,7 +34,22 @@ class Triangle extends Shape {
     }
 
     @Override
+    public String toString() {
+        return "Rectangle{side1=" + side1 + ", " + "side2=" + side2 + ", " + "side3=" + side3 + ", " + "color='" + color + "'}";
+    }
+    @Override
     public void paint() {
         System.out.println("This is a triangle with sides " + side1 + ", " + side2 + ", " + side3 + ", vertices at (" + x1 + ", " + y1 + "), (" + x2 + ", " + y2 + "), (" + x3 + ", " + y3 + "), color: " + color);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!super.equals(obj)) {
+            return false;
+        }
+        Triangle other = (Triangle) obj;
+        return this.side1 == other.side1 &&
+                this.side2 == other.side2 &&
+                this.side3 == other.side3;
     }
 }
