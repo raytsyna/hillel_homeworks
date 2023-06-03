@@ -1,4 +1,4 @@
-package homework7_Shapes;
+package homework9_Shapes;
 
 class Triangle extends Shape {
     private double side1;
@@ -10,7 +10,9 @@ class Triangle extends Shape {
     private double y2;
     private double x3;
     private double y3;
-    public Triangle(double side1, double side2, double side3, double x1, double y1, double x2, double y2, double x3, double y3, String color) {
+
+    public Triangle(Color color, double x1, double y1, double x2, double y2, double x3, double y3) {
+        super(color);
         this.side1 = side1;
         this.side2 = side2;
         this.side3 = side3;
@@ -22,6 +24,11 @@ class Triangle extends Shape {
         this.y3 = y3;
         this.color = color;
     }
+
+    public Triangle(Color color) {
+        super(color);
+    }
+
     @Override
     public double calculateArea() {
         double s = (side1 + side2 + side3) / 2;
@@ -39,7 +46,7 @@ class Triangle extends Shape {
     }
     @Override
     public void paint() {
-        System.out.println("This is a triangle with sides " + side1 + ", " + side2 + ", " + side3 + ", vertices at (" + x1 + ", " + y1 + "), (" + x2 + ", " + y2 + "), (" + x3 + ", " + y3 + "), color: " + color);
+        System.out.println("Painting a triangle with color: " + color);
     }
 
     @Override

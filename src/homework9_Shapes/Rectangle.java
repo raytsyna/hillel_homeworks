@@ -1,16 +1,16 @@
-package homework7_Shapes;
+package homework9_Shapes;
 class Rectangle extends Shape {
     private double width;
     private double height;
     private double x;
     private double y;
 
-    public Rectangle(double width, double height, double x, double y, String color) {
+    public Rectangle(Color color, double x, double y, double width, double height) {
+        super(color);
         this.width = width;
         this.height = height;
         this.x = x;
         this.y = y;
-        this.color = color;
     }
 
     @Override
@@ -25,7 +25,7 @@ class Rectangle extends Shape {
 
     @Override
     public void paint() {
-        System.out.println("This is a rectangle with width " + width + ", height " + height + ", top-left corner at (" + x + ", " + y + "), color: " + color);
+        System.out.println("Painting a rectangle with color: " + color);
     }
 
     @Override
